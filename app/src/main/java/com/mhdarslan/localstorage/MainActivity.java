@@ -15,6 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -93,7 +94,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void saveData(View view){
-        String data = et.getText().toString() +" " + et2.getText().toString();
+        String data = "";
+
+        HashMap<String,String> hashMap = new HashMap<>();
+        hashMap.put("fname",et.getText().toString());
+        hashMap.put("lname",et2.getText().toString());
+
+        data = hashMap.toString();
 
         try {
             FileOutputStream fileOutputStream = openFileOutput(FILENAME,MODE_PRIVATE);
