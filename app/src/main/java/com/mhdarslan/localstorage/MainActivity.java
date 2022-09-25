@@ -18,7 +18,7 @@ import java.io.OutputStreamWriter;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText et;
+    EditText et,et2;
     TextView tv;
     Button load_btn, save_btn;
     String FILENAME = "readFile.txt";
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         et=findViewById(R.id.et);
+        et2=findViewById(R.id.et2);
         tv=findViewById(R.id.tv);
         load_btn=findViewById(R.id.load_btn);
         save_btn=findViewById(R.id.save_btn);
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void saveData(View view){
-        String data = et.getText().toString();
+        String data = et.getText().toString() +" " + et2.getText().toString();
 
         try {
             FileOutputStream fileOutputStream = openFileOutput(FILENAME,MODE_PRIVATE);
