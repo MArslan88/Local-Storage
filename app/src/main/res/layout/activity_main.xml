@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+   <EditText
+       android:id="@+id/et"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Enter Message"
+       android:layout_marginTop="100dp"
+       android:padding="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/load_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load Data"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"/>
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Data"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="@drawable/border"
+        android:textSize="24sp"/>
+
+
+
+</LinearLayout>
